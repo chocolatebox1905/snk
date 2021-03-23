@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+button {
+  outline: none;
+}
+
+@font-face {
+  font-family: CircularRegular;
+  src: url("../fonts/regular.ttf");
+}
+
+@font-face {
+  font-family: CircularBold;
+  src: url("../fonts/bold.ttf");
+}
+
+@font-face {
+  font-family: CircularMedium;
+  src: url("../fonts/medium.ttf");
+}
+
+body {
+  background-color: #070707;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+  #content-container {
+    width: 100%;
+  }
+  #content-container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #070707;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #content-container nav .n-a {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-grid-rows: max-content max-content;
+        grid-template-rows: -webkit-max-content -webkit-max-content;
+        grid-template-rows: max-content max-content;
+    grid-row-gap: 8px;
+    opacity: 0.5;
+  }
+  #content-container nav .n-a .n-a-img {
+    width: 20px;
+    height: 20px;
+  }
+  #content-container nav .n-a h3 {
+    color: #a4a4a4;
+    font-family: "CircularRegular", "sans-serif";
+    font-size: 0.70rem;
+  }
+  #content-container nav .active {
+    opacity: 1;
+  }
+  #content-container #i-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content-container #i-container #i-content {
+    width: 90%;
+    margin: 100px 0px 30px 0px;
+    background-color: red;
+  }
+  #content-container #p-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-row-gap: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 80px;
+  }
+  #content-container #p-container .preview {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: max-content auto;
+        grid-template-rows: -webkit-max-content auto;
+        grid-template-rows: max-content auto;
+    grid-row-gap: 7.5px;
+  }
+  #content-container #p-container .preview .thumbnail-container {
+    width: 100%;
+    background-color: blue;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+  }
+  #content-container #p-container .preview .thumbnail-container .thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content-container #p-container .preview .thumbnail-container .thumbnail img {
+    width: 100%;
+  }
+  #content-container #p-container .preview .thumbnail-container #t-gradient {
+    height: 50%;
+    width: 100%;
+    background: #070707;
+    background: -webkit-gradient(linear, left bottom, left top, from(#070707), to(rgba(7, 7, 7, 0)));
+    background: linear-gradient(0deg, #070707 0%, rgba(7, 7, 7, 0) 100%);
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+  }
+  #content-container #p-container .preview .thumbnail-container .u-container {
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    margin-left: 5%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content auto;
+        grid-template-columns: -webkit-max-content auto;
+        grid-template-columns: max-content auto;
+    grid-column-gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #content-container #p-container .preview .thumbnail-container .u-container .u-p-c {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content-container #p-container .preview .thumbnail-container .u-container .u-p-c img {
+    height: 100%;
+  }
+  #content-container #p-container .preview .thumbnail-container .u-container h3 {
+    font-family: "CircularMedium", "sans-serif";
+    color: #fefefe;
+    font-size: 0.90rem;
+  }
+  #content-container #p-container .preview .p-info-c {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content-container #p-container .preview .p-info-c .p-info {
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: max-content max-content;
+        grid-template-rows: -webkit-max-content -webkit-max-content;
+        grid-template-rows: max-content max-content;
+    grid-row-gap: 3px;
+  }
+  #content-container #p-container .preview .p-info-c .p-info h3 {
+    font-family: "CircularMedium", "sans-serif";
+    font-size: 0.90rem;
+    color: #fefefe;
+  }
+  #content-container #p-container .preview .p-info-c .p-info h4 {
+    font-family: "CircularRegular", "sans-serif";
+    font-size: 0.75rem;
+    color: #a4a4a4;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  #content-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #content-container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=profile.css.map */
