@@ -120,7 +120,6 @@ body {
   }
   #content-container #p-container .preview .thumbnail-container {
     width: 100%;
-    background-color: blue;
     aspect-ratio: 16 / 9;
     position: relative;
     border-radius: 10px 10px 0px 0px;
